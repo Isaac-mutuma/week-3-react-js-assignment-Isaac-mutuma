@@ -1,71 +1,112 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19940535&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+# Recipe Finder Web App 🍳
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+A responsive Recipe Finder Web App built with React.js, Next.js, and Tailwind CSS. Search for recipes by name or ingredient, view detailed information, and save your favorite recipes.
 
-## Assignment Overview
+## 🌟 Features
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+- **Search Functionality**: Search recipes by name or ingredient using TheMealDB API
+- **Recipe Listing**: Display search results in responsive cards with images and titles
+- **Recipe Details**: View full recipe instructions, ingredients, and video tutorials
+- **Favorites Management**: Save and remove favorite recipes with persistent storage
+- **Responsive Design**: Mobile-friendly layout built with Tailwind CSS
+- **External API Integration**: Fetches data from TheMealDB (no API key required)
 
-## Getting Started
+## 🛠️ Technologies Used
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+- **React.js** with Next.js App Router
+- **Tailwind CSS** for styling
+- **TypeScript** for type safety
+- **React Hooks** (useState, useEffect, useContext)
+- **Context API** for state management
+- **Fetch API** for HTTP requests
+- **Local Storage** for data persistence
 
-## Files Included
+## 📁 Project Structure
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
-
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
-
-## Project Structure
-
-```
+\`\`\`
 src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
 ├── api/             # API integration functions
+├── components/      # Reusable UI components
+├── context/         # Context providers for state management
+├── hooks/           # Custom React hooks
+├── types/           # TypeScript type definitions
 ├── utils/           # Utility functions
-└── App.jsx          # Main application component
-```
+└── app/             # Next.js app directory
+\`\`\`
 
-## Submission
+## 🚀 Getting Started
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+1. **Clone the repository**
+   \`\`\`bash
+   git clone <repository-url>
+   cd recipe-finder-app
+   \`\`\`
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-## Resources
+3. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+4. **Open your browser**
+   Navigate to \`http://localhost:3000\`
+
+## 🌐 API Integration
+
+This app uses **TheMealDB API** which provides free access to recipe data:
+
+- **Search by name**: \`https://www.themealdb.com/api/json/v1/1/search.php?s={query}\`
+- **Search by ingredient**: \`https://www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}\`
+- **Recipe details**: \`https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}\`
+
+## 📱 Key Components
+
+- **SearchBar**: Input field for recipe searches
+- **RecipeCard**: Displays recipe preview with favorite toggle
+- **RecipeModal**: Shows detailed recipe information
+- **FavoritesModal**: Displays saved favorite recipes
+- **RecipeGrid**: Responsive grid layout for recipe cards
+
+## 💾 State Management
+
+- **FavoritesContext**: Manages favorite recipes using React Context
+- **Local Storage**: Persists favorites between sessions
+- **Custom Hooks**: \`useFetchRecipes\` for API data fetching
+
+## 🎨 Responsive Design
+
+- Mobile-first approach with Tailwind CSS
+- Responsive grid layouts (1-4 columns based on screen size)
+- Touch-friendly interface for mobile devices
+- Optimized images with hover effects
+
+## 🔧 Custom Hooks
+
+- **useFetchRecipes**: Handles recipe search and loading states
+- **useFavorites**: Manages favorite recipes state
+
+## 📦 Deployment
+
+This app is ready for deployment on platforms like:
+- **Vercel** (recommended for Next.js)
+- **Netlify**
+- **GitHub Pages**
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+Built with ❤️ using React.js, Next.js, and Tailwind CSS
